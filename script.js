@@ -1,19 +1,25 @@
-const img=document.querySelector('#img1')
-const doc=document.querySelector('#doc1')
-const img1=document.querySelector('#img2')
-const doc1=document.querySelector('#doc2')
-fetch('https://api.slingacademy.com/v1/sample-data/photos?offset=0&limit=20')
-.then(function(respose){
-    return respose.json()
+const  parent=document.querySelector('#img')
+console.log(img);
+
+
+fetch('https://api.slingacademy.com/v1/sample-data/photos?offset=0&limit=20').then(function(resonse){
+    return resonse.json()
 })
 .then(function(resp1){
-    const ur=resp1.photos[0].url
-    img.src=ur
-    const ur1=resp1.photos[1].url
-    img1.src=ur1
-    doc.innerHTML=resp1.photos[0].
-    description;
-    doc1.innerHTML=resp1.photos[1].description
+    for(let i=0;i<=19;i++)
+    { 
+        const child=document.createElement('div')
+        child.id="child"
+         const image=document.createElement('IMG')
+         image.src=resp1.photos[i].url 
+         child.appendChild(image)
+         parent.appendChild(child)
+         const para=document.createElement('p')
+         para.innerHTML=resp1.photos[i].description;  
+         child.appendChild(para)
+         parent.appendChild(child)
+    }
+
 })
 .catch(function(error){
    console.log(error);

@@ -8,21 +8,25 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 }
-.child img{
+#img{
     display: flex;
     flex-direction: column;
-    /* border: 2px solid red; */
-    border-radius: 50%;
-    width: 15rem;
+    gap: 2rem;
+    align-items: center;
+    justify-self: center
 }
-.child{
+#child{
+    border: 3px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    width: 20rem;
+    box-shadow: 6px 10px gray;
 }
-.image{
-    border: 2px solid black;
-    box-shadow: 10px 10px green;
+#child img{
+    /* border: 2px solid red; */
+    width: 10rem;
+    border-radius: 50%;
 }
