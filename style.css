@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.child img{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    border-radius: 50%;
+    width: 15rem;
+}
+.child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.image{
+    border: 2px solid black;
+    box-shadow: 10px 10px green;
+}
